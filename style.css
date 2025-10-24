@@ -1,4 +1,4 @@
-/* Elegant contrast gradient background */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff);
@@ -43,7 +43,7 @@ h1 {
   font-weight: 600;
 }
 
-/* Input Section */
+
 .input-container {
   display: flex;
   gap: 8px;
@@ -74,7 +74,7 @@ h1 {
   background-color: #55efc4;
 }
 
-/* Task List Styling */
+
 ul {
   list-style: none;
   padding: 0;
@@ -114,7 +114,7 @@ ul {
   background: #eafff3;
 }
 
-/* Task buttons */
+
 .task button {
   border: none;
   background: none;
