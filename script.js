@@ -1,16 +1,16 @@
-// Select elements
+
 const taskInput = document.getElementById("taskInput");
 const taskDate = document.getElementById("taskDate");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 
-// Load from localStorage
+
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// Display tasks on load
+
 renderTasks();
 
-// Add new task
+
 addBtn.addEventListener("click", () => {
   const taskText = taskInput.value.trim();
   const dateTime = taskDate.value;
@@ -34,12 +34,12 @@ addBtn.addEventListener("click", () => {
   taskDate.value = "";
 });
 
-// Render all tasks
+
 function renderTasks() {
   taskList.innerHTML = "";
   const now = new Date();
 
-  // Sort tasks by date/time
+  
   tasks.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   tasks.forEach((task) => {
@@ -65,13 +65,13 @@ function renderTasks() {
       </div>
     `;
 
-    // Mark complete
+    
     li.querySelector(".complete-btn").addEventListener("click", () => {
       task.completed = !task.completed;
       saveAndRender();
     });
 
-    // Edit task
+    
     li.querySelector(".edit-btn").addEventListener("click", () => {
       const newText = prompt("Edit your task:", task.text);
       if (newText && newText.trim() !== "") {
@@ -80,7 +80,7 @@ function renderTasks() {
       }
     });
 
-    // Delete task
+    
     li.querySelector(".delete-btn").addEventListener("click", () => {
       tasks = tasks.filter((t) => t.id !== task.id);
       saveAndRender();
